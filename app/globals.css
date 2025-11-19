@@ -203,6 +203,11 @@ img {
   border-radius: 8px;
   overflow: hidden;
   transition: opacity 0.2s ease-out;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
 }
 
 .music-grid__link:hover {
@@ -250,4 +255,120 @@ img {
 
 .bottom-spacer {
   margin-top: 16px;
+}
+
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal-content {
+  background-color: var(--bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  transition: opacity 0.2s ease-out;
+  z-index: 1;
+}
+
+.modal-close:hover {
+  opacity: 0.7;
+}
+
+.modal-body {
+  padding: 32px 24px 24px;
+}
+
+.modal-cover {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.modal-cover-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.modal-title {
+  font-family: var(--font-adrip, system-ui, sans-serif);
+  font-size: clamp(24px, 4vw, 32px);
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 16px 0;
+  color: var(--text-color);
+}
+
+.modal-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted-color);
+  margin: 0 0 24px 0;
+}
+
+.modal-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-link {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font-adrip, system-ui, sans-serif);
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: var(--text-color);
+  transition: all 0.2s ease-out;
+}
+
+.modal-link:hover {
+  border-color: var(--text-color);
+  transform: translateY(-1px);
+}
+
+@media (min-width: 480px) {
+  .modal-links {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .modal-link {
+    flex: 1;
+    min-width: 120px;
+  }
 }
