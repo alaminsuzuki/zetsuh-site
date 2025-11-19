@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Zetsuh" }],
   creator: "Zetsuh",
   publisher: "Zetsuh",
-  metadataBase: new URL("https://zetsuh.com"),
+  metadataBase: new URL("https://zetsuh-site.vercel.app"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://zetsuh.com",
+    url: "https://zetsuh-site.vercel.app",
     siteName: "Zetsuh",
     title: "Zetsuh - Alternative Hip Hop Artist & Producer",
     description: "Official site for Zetsuh - Alternative R&B/hip-hop artist, producer, and creative genius. Listen to KILLALLINFLUENCERS and Onaka Suita.",

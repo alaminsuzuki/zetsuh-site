@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   title: "Contact Zetsuh - Get in Touch",
   description: "Contact Zetsuh for collaborations, bookings, and inquiries. Reach out to the alternative hip-hop artist and producer.",
   openGraph: {
+    type: "website",
+    url: "https://zetsuh-site.vercel.app/contact",
     title: "Contact Zetsuh - Get in Touch",
     description: "Contact Zetsuh for collaborations, bookings, and inquiries. Reach out to the alternative hip-hop artist and producer.",
     images: [

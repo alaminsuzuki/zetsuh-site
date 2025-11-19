@@ -6,6 +6,8 @@ export const metadata: Metadata = {
   title: "Zetsuh - Alternative Hip Hop Artist & Producer",
   description: "Official site for Zetsuh - Alternative R&B/hip-hop artist, producer, and creative genius. Listen to KILLALLINFLUENCERS and Onaka Suita.",
   openGraph: {
+    type: "website",
+    url: "https://zetsuh-site.vercel.app",
     title: "Zetsuh - Alternative Hip Hop Artist & Producer",
     description: "Official site for Zetsuh - Alternative R&B/hip-hop artist, producer, and creative genius. Listen to KILLALLINFLUENCERS and Onaka Suita.",
     images: [

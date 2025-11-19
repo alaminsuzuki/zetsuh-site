@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   title: "About Zetsuh - Alternative Hip Hop Artist",
   description: "Learn about Zetsuh, a Japanese-Nigerian alternative R&B/hip-hop artist from Kano, Nigeria, now based in southern France. Discover his musical journey and influences.",
   openGraph: {
+    type: "website",
+    url: "https://zetsuh-site.vercel.app/about",
     title: "About Zetsuh - Alternative Hip Hop Artist",
     description: "Learn about Zetsuh, a Japanese-Nigerian alternative R&B/hip-hop artist from Kano, Nigeria, now based in southern France.",
     images: [
