@@ -1,6 +1,24 @@
 import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import AnimatedSection from "@/components/AnimatedSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Zetsuh - Alternative Hip Hop Artist",
+  description: "Learn about Zetsuh, a Japanese-Nigerian alternative R&B/hip-hop artist from Kano, Nigeria, now based in southern France. Discover his musical journey and influences.",
+  openGraph: {
+    title: "About Zetsuh - Alternative Hip Hop Artist",
+    description: "Learn about Zetsuh, a Japanese-Nigerian alternative R&B/hip-hop artist from Kano, Nigeria, now based in southern France.",
+    images: [
+      {
+        url: "/assets/about/image-about-1.jpg",
+        width: 360,
+        height: 420,
+        alt: "Portrait of Zetsuh",
+      },
+    ],
+  },
+};
 
 export default function AboutPage() {
   return (

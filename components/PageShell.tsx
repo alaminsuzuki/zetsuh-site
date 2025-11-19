@@ -1,16 +1,21 @@
+"use client";
+
 import Link from "next/link";
 import type { PropsWithChildren } from "react";
 import Navbar, { type NavPage } from "./Navbar";
+import PageTransition from "./PageTransition";
 
-type PageShellProps = PropsWithChildren<{
+interface PageShellProps extends PropsWithChildren {
   currentPage: NavPage;
-}>;
+}
 
 const PageShell = ({ children, currentPage }: PageShellProps) => (
   <div className="page-shell">
     <div className="page-shell__inner">
       <Navbar currentPage={currentPage} />
-      <div className="page-shell__content">{children}</div>
+      <PageTransition className="page-shell__content">
+        {children}
+      </PageTransition>
       <footer className="site-footer">
         <p>zetsuh copyright 2025</p>
         <div className="footer-links">

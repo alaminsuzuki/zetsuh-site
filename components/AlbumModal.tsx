@@ -4,17 +4,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 import Image from "next/image";
 
-type AlbumModalProps = {
+interface AlbumModalProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;
   description: string;
-  links: { label: string; url: string }[];
+  links: Array<{ label: string; url: string }>;
   coverImage: {
     src: string;
     alt: string;
   };
-};
+}
 
 export default function AlbumModal({
   isOpen,

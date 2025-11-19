@@ -1,6 +1,24 @@
 import Image from "next/image";
 import PageShell from "@/components/PageShell";
 import AnimatedSection from "@/components/AnimatedSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Zetsuh - Get in Touch",
+  description: "Contact Zetsuh for collaborations, bookings, and inquiries. Reach out to the alternative hip-hop artist and producer.",
+  openGraph: {
+    title: "Contact Zetsuh - Get in Touch",
+    description: "Contact Zetsuh for collaborations, bookings, and inquiries. Reach out to the alternative hip-hop artist and producer.",
+    images: [
+      {
+        url: "/assets/gifs/contact.gif",
+        width: 900,
+        height: 600,
+        alt: "Animated contact visual",
+      },
+    ],
+  },
+};
 
 export default function ContactPage() {
   return (

@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 import type { PropsWithChildren } from "react";
 
-type AnimatedSectionProps = PropsWithChildren<{
+interface AnimatedSectionProps extends PropsWithChildren {
   delay?: number;
   className?: string;
-}>;
+}
 
 export default function AnimatedSection({
   children,

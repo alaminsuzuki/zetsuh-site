@@ -1,37 +1,40 @@
 import Image from "next/image";
 import Link from "next/link";
+import TransitionLink from "./TransitionLink";
+import type { NavPage } from "@/types";
 
-export type NavPage = "home" | "about" | "contact";
+export type { NavPage };
 
-const activeHrefMap: Record<NavPage, string> = {
+const ACTIVE_HREF_MAP: Record<NavPage, string> = {
   home: "/",
   about: "/about",
   contact: "/contact",
-};
+} as const;
 
-const cx = (base: string, active: boolean) =>
+const classNames = (base: string, active: boolean): string =>
   active ? `${base} nav-link--active` : base;
 
 type NavbarProps = {
   currentPage: NavPage;
 };
 
-const Navbar = ({ currentPage }: NavbarProps) => {
-  const isActiveHref = (href: string) => activeHrefMap[currentPage] === href;
+export default function Navbar({ currentPage }: NavbarProps) {
+  const isActiveHref = (href: string): boolean => 
+    ACTIVE_HREF_MAP[currentPage] === href;
 
   return (
     <nav className="navbar">
-      <Link
+      <TransitionLink
         href="/contact"
-        className={cx("nav-link", isActiveHref("/contact"))}
+        className={classNames("nav-link", isActiveHref("/contact"))}
         aria-current={isActiveHref("/contact") ? "page" : undefined}
       >
         contact
-      </Link>
+      </TransitionLink>
 
-      <Link
+      <TransitionLink
         href="/"
-        className={cx("nav-logo", currentPage === "home")}
+        className={classNames("nav-logo", currentPage === "home")}
         aria-current={currentPage === "home" ? "page" : undefined}
       >
         <Image
@@ -41,18 +44,16 @@ const Navbar = ({ currentPage }: NavbarProps) => {
           height={48}
           priority
         />
-      </Link>
+      </TransitionLink>
 
-      <Link
+      <TransitionLink
         href="/about"
-        className={cx("nav-link", isActiveHref("/about"))}
+        className={classNames("nav-link", isActiveHref("/about"))}
         aria-current={isActiveHref("/about") ? "page" : undefined}
       >
         about
-      </Link>
+      </TransitionLink>
     </nav>
   );
-};
-
-export default Navbar;
+}
 
